@@ -17,7 +17,29 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="/" class="logo" aria-label="Krypto — главная">Krypto</a>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#how-it-works">How it works</a></li>
+            <li><a class="nav__link" href="#cryptos">Cryptos</a></li>
+            <li><a class="nav__link" href="#features">Features</a></li>
+            <li><a class="nav__link" href="#testimonial">Testimonial</a></li>
+            <li><a class="nav__link" href="#university">University</a></li>
+          </ul>
+        </nav>
+
+        <button class="lang" type="button">
+          <span class="lang__flag" aria-hidden="true">🇺🇸</span>
+          <span class="lang__code">EN</span>
+          <svg class="lang__arrow" width="10" height="6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+    </header>
 
     <main>
       <section class="hero" id="how-it-works"></section>
