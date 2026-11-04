@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Папки, создаваемые Finder
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# JetBrains (на случай перехода)
+.idea/
+
+# Логи
+*.log
+npm-debug.log*
+
+# Node / сборка (на будущее)
+node_modules/
+dist/
