@@ -42,7 +42,89 @@
     </header>
 
     <main>
-      <section class="hero" id="how-it-works"></section>
+      <section class="hero" id="how-it-works">
+        <div class="hero__decor" aria-hidden="true">
+          <img
+            class="hero__coin hero__coin--btc"
+            src="img/coin-btc.png"
+            alt=""
+            width="220"
+            height="220"
+          />
+          <img
+            class="hero__coin hero__coin--ltc"
+            src="img/coin-btc.png"
+            alt=""
+            width="160"
+            height="160"
+          />
+          <img
+            class="hero__coin hero__coin--eth"
+            src="img/coin-btc.png"
+            alt=""
+            width="200"
+            height="200"
+          />
+        </div>
+
+        <div class="container hero__inner">
+          <h1 class="hero__title">Next Generation<br />Crypto Trading</h1>
+
+          <div class="timer" data-timer="2026-12-20T00:00:00">
+            <p class="timer__label">Crypto Market Starts in</p>
+
+            <div class="timer__clock" role="timer" aria-live="off">
+              <div class="timer__unit">
+                <span class="timer__value" data-days>02</span>
+                <span class="timer__sep" aria-hidden="true">:</span>
+                <span class="timer__caption">Days</span>
+              </div>
+              <div class="timer__unit">
+                <span class="timer__value" data-hours>12</span>
+                <span class="timer__sep" aria-hidden="true">:</span>
+                <span class="timer__caption">Hours</span>
+              </div>
+              <div class="timer__unit">
+                <span class="timer__value" data-minutes>23</span>
+                <span class="timer__sep" aria-hidden="true">:</span>
+                <span class="timer__caption">Minutes</span>
+              </div>
+              <div class="timer__unit">
+                <span class="timer__value" data-seconds>35</span>
+                <span class="timer__sep" aria-hidden="true">:</span>
+                <span class="timer__caption">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#">Download app</a>
+            <a class="btn btn--ghost" href="#cryptos">Trade crypto</a>
+          </div>
+
+          <div class="hero__accept">
+            <p class="hero__accept-label">We accept</p>
+            <ul class="chips">
+              <li class="chip">
+                <img class="chip__icon" src="img/coin-btc.png" alt="" width="24" height="24" />
+                <span class="chip__name">Bitcoin</span>
+              </li>
+              <li class="chip">
+                <img class="chip__icon" src="img/coin-btc.png" alt="" width="24" height="24" />
+                <span class="chip__name">Litecoin</span>
+              </li>
+              <li class="chip">
+                <img class="chip__icon" src="img/coin-btc.png" alt="" width="24" height="24" />
+                <span class="chip__name">Chainlink</span>
+              </li>
+              <li class="chip">
+                <img class="chip__icon" src="img/coin-btc.png" alt="" width="24" height="24" />
+                <span class="chip__name">Siacoin</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <section class="how-to-trade"></section>
       <section class="cryptos" id="cryptos"></section>
       <section class="features" id="features"></section>

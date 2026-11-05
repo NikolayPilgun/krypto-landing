@@ -135,3 +135,223 @@ button:focus-visible {
 .lang:hover .lang__arrow {
   color: var(--accent);
 }
+/* ============ Hero ============ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 96px 120px;
+  background:
+    radial-gradient(60% 60% at 50% 0%, rgba(255, 75, 85, 0.16), transparent 70%),
+    radial-gradient(50% 50% at 100% 100%, rgba(80, 60, 200, 0.12), transparent 70%), var(--bg);
+}
+.hero__decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.hero__coin {
+  position: absolute;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  animation: float 6s ease-in-out infinite;
+}
+.hero__coin--btc {
+  top: 8%;
+  left: 4%;
+  width: 220px;
+  animation-delay: 0s;
+}
+.hero__coin--ltc {
+  top: 18%;
+  right: 6%;
+  width: 160px;
+  animation-delay: 1.5s;
+}
+.hero__coin--eth {
+  bottom: 12%;
+  left: 12%;
+  width: 200px;
+  animation-delay: 3s;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(4deg);
+  }
+}
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero__title {
+  max-width: 900px;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+/* Таймер */
+.timer {
+  margin-top: 32px;
+}
+.timer__label {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.timer__clock {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+.timer__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+.timer__value {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.timer__caption {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.timer__sep {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--accent);
+}
+/* Кнопки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding-inline: 32px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+.btn--solid {
+  color: var(--white);
+  background-image: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 8px 24px rgba(255, 51, 68, 0.35);
+}
+.btn--ghost {
+  color: var(--white);
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn--solid:hover {
+  box-shadow: 0 12px 32px rgba(255, 51, 68, 0.5);
+}
+.btn--ghost:hover {
+  border-color: var(--accent);
+  background-color: rgba(255, 75, 85, 0.08);
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+/* We accept */
+.hero__accept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+.hero__accept-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  cursor: default;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+.chip:hover {
+  border-color: rgba(255, 75, 85, 0.5);
+  background-color: rgba(70, 41, 42, 0.08);
+}
+.chip__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .hero__title br {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__coin {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
