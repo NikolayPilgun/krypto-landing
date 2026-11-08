@@ -355,3 +355,102 @@ button:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+/* ============ Section head (переиспользуемый) ============ */
+.section-head {
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: 56px;
+  text-align: center;
+}
+.section-head__title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+.section-head__subtitle {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+/* ============ How to trade ============ */
+.how-to-trade {
+  padding-block: 96px;
+  background-color: var(--bg);
+}
+.how-to-trade__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+.how-to-trade__media {
+  display: flex;
+  justify-content: center;
+}
+.how-to-trade__phone {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  aspect-ratio: 520 / 620;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.55));
+}
+.how-to-trade__subtitle {
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* Шаги */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  counter-reset: step;
+}
+.steps__item {
+  counter-increment: step;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 75, 85, 0.35);
+  border-radius: var(--radius-pill);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+.steps__num {
+  display: none;
+}
+.steps__item::before {
+  content: counter(step, decimal-leading-zero);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  background-color: rgba(255, 75, 85, 0.12);
+  border: 1px solid rgba(255, 75, 85, 0.4);
+  border-radius: 50%;
+}
+.steps__text {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  .how-to-trade__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 64px;
+    align-items: center;
+  }
+}
