@@ -454,3 +454,133 @@ button:focus-visible {
     align-items: center;
   }
 }
+/* ============ Available Cryptos ============ */
+.cryptos {
+  padding-block: 96px;
+  background-color: var(--bg);
+}
+.cryptos__wrapper {
+  display: block;
+}
+.cryptos__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.cryptos__nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 53px;
+  color: var(--white);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+.cryptos__nav:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background-color: rgba(255, 75, 85, 0.08);
+}
+.cryptos__nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+/* ---- Компонент карточки ---- */
+.crypto-card {
+  --card-bg: #ffffff;
+  --card-text: #14122b;
+  --card-mutes: #6b6b85;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: var(--radius-card);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.crypto-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 360 / 220;
+  background-color: #f4f2f8;
+  overflow: hidden;
+}
+.crypto-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.crypto-card:hover .crypto-card__img {
+  transform: scale(1.05);
+}
+.crypto-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px;
+}
+.crypto-card__title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--card-text);
+}
+.crypto-card__text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--card-mutes);
+}
+.crypto-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+}
+.crypto-card__price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--card-text);
+}
+/* Кнопка small */
+.btn--sm {
+  min-height: 40px;
+  padding-inline: 20px;
+  font-size: 11px;
+}
+@media (min-width: 768px) {
+  .cryptos__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .cryptos__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+  }
+  .cryptos__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .cryptos__nav {
+    display: inline-flex;
+  }
+}
