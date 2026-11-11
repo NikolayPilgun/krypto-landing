@@ -718,3 +718,67 @@ button:focus-visible {
   width: 140px;
   height: auto;
 }
+/* ============ Testimonials & Knowledge ============ */
+.testimonials {
+  padding-block: 96px;
+  background-color: var(--bg);
+  overflow: hidden;
+}
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+/* Лента отзывов */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+}
+
+/* Отзыв */
+.review {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  transition: border-color 0.2s ease;
+}
+.review:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.review__text {
+  margin: 0;
+  padding: 30px 0px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.review__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 40px;
+}
+.review__avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.review__author {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--white);
+}
